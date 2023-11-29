@@ -98,7 +98,12 @@ const config: Config = {
       '5.0.0': 'docs'
       // 添加更多版本...
     },
-
+    themes: ['@docusaurus/theme-search-algolia'],
+    algolia: {
+      appId: 'X1Z85QJPUV',
+      apiKey: 'bf7211c161e8205da2f933a02534105a',
+      indexName: 'docusaurus-2',
+    },
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
