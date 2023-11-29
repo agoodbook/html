@@ -4,8 +4,8 @@
   <ShortName>AGoodBook</ShortName>
   <Description>Search AGoodBook</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://agoodbook.github.io/img/favicon.ico</Image>
-  <Url type="text/html" method="get" template="https://agoodbook.github.io/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://agoodbook.github.io/opensearch.xml" />
-  <moz:SearchForm>https://agoodbook.github.io/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://agoodbook.github.io/html/img/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://agoodbook.github.io/html/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://agoodbook.github.io/html/opensearch.xml" />
+  <moz:SearchForm>https://agoodbook.github.io/html/</moz:SearchForm>
 </OpenSearchDescription>
