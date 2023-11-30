@@ -11,10 +11,10 @@ const config: Config = {
     favicon: 'img/favicon.ico',
 
   // 配置网站站点url
-  url: 'https://agoodbook.github.io',
+  url: `https://agoodbook.github.io/`,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: `/${repo}`,
 
   // GitHub部署配置
   organizationName: username, // 用户名

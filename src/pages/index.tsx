@@ -5,10 +5,24 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 
+import '../apis/index'
 import styles from './index.module.css';
+import {useEffect} from "react";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
+  useEffect(()=> {
+      console.log('打印数据');
+      fetch('https://v1.hitokoto.cn/?c=d&c=i&encode=json&lang=cn', {
+          method: 'GET'
+      }).then(res => {
+          return res.json()
+      }).then(data => {
+          console.log(data)
+      })
+  })
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
