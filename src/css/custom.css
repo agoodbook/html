@@ -28,3 +28,38 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+@media screen and (min-width: 768px){
+  .custom-search .DocSearch  {
+    width: 200px;
+  }
+}
+
+.custom-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.custom-footer .hitokoto,
+.custom-footer .from {
+  text-align: center;
+  color: rgb(153, 138, 138);
+}
+
+.custom-footer .from {
+  opacity: 0;
+  transition: opacity 0.3s;
+  position: absolute;
+  right: 50%;
+  top: 30px;
+  transform: translateX(50%);
+}
+
+.custom-footer .hitokoto {
+  cursor: pointer;
+  margin-top: 5px;
+}

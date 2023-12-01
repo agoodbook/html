@@ -24,9 +24,6 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],
@@ -43,7 +40,6 @@ const config: Config = {
       }
     }
   },
-
   presets: [
     [
       'classic',
@@ -83,7 +79,6 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
   themeConfig: {
     docs: {
       sidebar: {
@@ -108,6 +103,7 @@ const config: Config = {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'AGoodBook', // 导航上站点名称
+      hideOnScroll: true,
       logo: {
         alt: 'AGoodBook', //  站点 logo 文字替换
         src: 'img/logo.svg',  //   站点 logo  链接
@@ -120,6 +116,11 @@ const config: Config = {
           position: 'left',           // 显示在导航的 左边 还是 右边
         },
         //   right
+        {
+          type: 'search',
+          position: 'left',
+          className: 'custom-search'
+        },
         {
           type: 'docsVersionDropdown',
           position: 'right',
@@ -146,9 +147,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'dark',
-      links: [
-      ],
+      style: 'light',
       copyright: `Copyright © ${new Date().getFullYear()} AGoodBook.`,
     },
     prism: {
