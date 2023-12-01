@@ -55,11 +55,13 @@
   transition: opacity 0.3s;
   position: absolute;
   right: 50%;
-  top: 30px;
+  padding-top: 30px;
   transform: translateX(50%);
 }
 
 .custom-footer .hitokoto {
   cursor: pointer;
   margin-top: 5px;
+  position: relative;
+  z-index: 999;
 }
