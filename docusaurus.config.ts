@@ -6,19 +6,15 @@ const username: string = "agoodbook";
 const repo: string = "html";
 
 const config: Config = {
-  title: "AGoodBook", // 站点名称
-  tagline: "书山有路勤为径，学海无涯苦作舟", // slogan，标语
+  title: "AGoodBook",
+  tagline: "书山有路勤为径，学海无涯苦作舟",
   favicon: "img/favicon.ico",
 
-  // 配置网站站点url
   url: `https://agoodbook.github.io/`,
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: `/${repo}`,
 
-  // GitHub部署配置
-  organizationName: username, // 用户名
-  projectName: repo, // 仓库名
+  organizationName: username,
+  projectName: repo,
   deploymentBranch: "gh-pages",
 
   onBrokenLinks: "throw",
@@ -40,14 +36,13 @@ const config: Config = {
       },
     },
   },
+  themes: ["@docusaurus/theme-live-codeblock"],
   presets: [
     [
       "classic",
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: `https://github.com/${username}/${repo}/tree/main`,
           lastVersion: "current",
           versions: {
@@ -58,16 +53,6 @@ const config: Config = {
             "4.0.0": {
               label: "HTML4",
               path: "4.0.0",
-              banner: "none",
-            },
-            "3.0.0": {
-              label: "HTML3",
-              path: "3.0.0",
-              banner: "none",
-            },
-            "2.0.0": {
-              label: "HTML2",
-              path: "2.0.0",
               banner: "none",
             },
           },
@@ -86,11 +71,8 @@ const config: Config = {
       },
     },
     versions: {
-      "2.0.0": "versioned_docs/version-2.0.0",
-      "3.0.0": "versioned_docs/version-3.0.0",
       "4.0.0": "versioned_docs/version-4.0.0",
       "5.0.0": "docs",
-      // 添加更多版本...
     },
     themes: ["@docusaurus/theme-search-algolia"],
     algolia: {
@@ -99,7 +81,6 @@ const config: Config = {
       indexName: "html",
       contextualSearch: true,
     },
-    // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
       title: "AGoodBook", // 导航上站点名称
@@ -110,12 +91,11 @@ const config: Config = {
       },
       items: [
         {
-          to: "docs/next", // 点击后跳转的链接，站内跳转用 to ,站外用 href
-          activeBasePath: "docs", // 根据它显示当前高亮
-          label: "文档", // 显示的名称
-          position: "left", // 显示在导航的 左边 还是 右边
+          to: "docs/next",
+          activeBasePath: "docs",
+          label: "文档",
+          position: "left",
         },
-        //   right
         {
           type: "search",
           position: "left",

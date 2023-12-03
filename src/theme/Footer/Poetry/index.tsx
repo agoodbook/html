@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { message, Tooltip } from "antd";
 import { getRandomPoetry } from "@site/src/apis";
+import "./index.css";
 
 export default function Poetry() {
   const [messageApi, contextHolder] = message.useMessage();
@@ -41,7 +42,7 @@ export default function Poetry() {
   function handleCopyHitokoto() {
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(info.poetry).then(async () => {
-        await messageApi.success("复制成功");
+        await messageApi.success("已复制到剪贴板");
       });
     }
   }
@@ -53,7 +54,7 @@ export default function Poetry() {
   return (
     <>
       {info.poetry ? (
-        <div className="custom-footer">
+        <div className="poetry">
           {contextHolder}
           <Tooltip color="#2db7f5" placement="top" title="点击复制">
             <span
