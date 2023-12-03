@@ -12,29 +12,6 @@ interface Props {
   value: any[];
 }
 
-const data: any[] = [
-  {
-    key: "1",
-    name: "article",
-    description: "定义页面独立的内容区域。",
-  },
-  {
-    key: "2",
-    name: "aside",
-    description: "定义页面的侧边栏内容。",
-  },
-  {
-    key: "3",
-    name: "article",
-    description: "定义页面独立的内容区域。",
-  },
-  {
-    key: "4",
-    name: "aside",
-    description: "定义页面的侧边栏内容。",
-  },
-];
-
 export default function DocTable(props: Props) {
   const [attributeList, setAttributeList] = useState([]);
   function generateColumns(data: AttributeItem[]) {
@@ -62,7 +39,7 @@ export default function DocTable(props: Props) {
     <Table
       className="doc-table"
       columns={attributeList}
-      dataSource={data}
+      dataSource={props.value}
       pagination={false}
     />
   );
