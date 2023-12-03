@@ -22,12 +22,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "semantic-tags",
-      label: "语义元素",
-    },
-    {
-      type: "doc",
-      id: "started",
-      label: "介绍",
+      label: "新增元素",
     },
     {
       type: "doc",
