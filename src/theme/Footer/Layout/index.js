@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import Poetry from "@site/src/theme/Footer/Poetry";
+import BrowserOnly from "@docusaurus/BrowserOnly";
 export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer
@@ -16,7 +17,9 @@ export default function FooterLayout({ style, links, logo, copyright }) {
             {copyright}
           </div>
         )}
-        <Poetry />
+        <BrowserOnly>
+          <Poetry />
+        </BrowserOnly>
       </div>
     </footer>
   );
