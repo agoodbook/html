@@ -1,12 +1,13 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 import Poetry from "@site/src/theme/Footer/Poetry";
-export default function FooterLayout({style, links, logo, copyright}) {
+export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer
-      className={clsx('footer', {
-        'footer--dark': style === 'dark',
-      })}>
+      className={clsx("footer", {
+        "footer--dark": style === "dark",
+      })}
+    >
       <div className="container container-fluid">
         {links}
         {(logo || copyright) && (
@@ -15,7 +16,7 @@ export default function FooterLayout({style, links, logo, copyright}) {
             {copyright}
           </div>
         )}
-        <Poetry/>
+        <Poetry />
       </div>
     </footer>
   );
