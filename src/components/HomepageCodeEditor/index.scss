@@ -1,0 +1,85 @@
+.homepage-code-editor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  min-height: 460px;
+
+  .editor-html {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+
+    .top {
+      height: 20px;
+      background-color: #1e1e1e;
+      display: flex;
+      padding-left: 10px;
+
+      li {
+        margin: 10px 3px;
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border-radius: 50%;
+        list-style: none;
+      }
+
+      li:first-child {
+        background-color: #ff5f56;
+      }
+
+      li:nth-child(2) {
+        background-color: #ffbd2e;
+      }
+
+      li:last-child {
+        background-color: #27c93f;
+      }
+    }
+
+  }
+
+  .preview {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0 2px 4px 0, rgba(14, 30, 37, 0.32) 0 2px 16px 0;
+  }
+}
+
+/* 编辑器整体背景颜色和前景颜色 */
+.monaco-editor.vs-dark {
+  background-color: #ffffff !important;
+  color: #ffffff;
+  margin-top: 10px;
+  margin-left: -13px;
+}
+
+@media screen and (max-width: 996px) {
+  .homepage-code-editor {
+    flex-direction: column;
+    padding: 30px;
+
+    .preview {
+      margin-top: 40px;
+    }
+
+  }
+}
+
+[data-theme="dark"] {
+  .preview, .editor-html {
+    background: #1e1e1e;
+    color: white;
+    box-shadow: rgba(255, 255, 255, 0.12) 0 2px 4px 0, rgba(255, 255, 255, 0.32) 0 2px 16px 0;
+  }
+}
+
+

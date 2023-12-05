@@ -37,7 +37,7 @@ const config: Config = {
       },
     },
   },
-  themes: ["@docusaurus/theme-live-codeblock"],
+  plugins: ["docusaurus-plugin-sass"],
   presets: [
     [
       "classic",
@@ -59,7 +59,7 @@ const config: Config = {
           },
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.scss",
         },
       } satisfies Preset.Options,
     ],
