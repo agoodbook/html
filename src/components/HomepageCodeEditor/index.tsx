@@ -1,6 +1,17 @@
 import React, { useState } from "react";
-import MonacoEditor from "react-monaco-editor";
 import "./index.scss";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+const MonacoEditor = (props: any) => {
+  return (
+    <BrowserOnly fallback={<div>Loading...</div>}>
+      {() => {
+        const LibComponent = require("react-monaco-editor/lib");
+        return <LibComponent {...props} />;
+      }}
+    </BrowserOnly>
+  );
+};
 
 const HomepageCodeEditor = () => {
   const [code, setCode] = useState(
@@ -59,4 +70,5 @@ const HomepageCodeEditor = () => {
     </div>
   );
 };
+
 export default HomepageCodeEditor;
