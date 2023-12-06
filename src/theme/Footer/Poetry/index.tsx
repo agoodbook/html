@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { message, Tooltip } from "antd";
 import { getRandomPoetry } from "@site/src/apis";
 import "./index.css";
-
 export default function Poetry() {
   const [messageApi, contextHolder] = message.useMessage();
   const [isShowName, setIsShowName] = useState(false);
