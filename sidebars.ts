@@ -26,17 +26,8 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "doc",
-      id: "guide",
-      label: "指南",
-    },
-    {
-      type: "category",
-      label: "food",
-      link: {
-        type: "generated-index",
-        title: "Docusaurus Guides",
-      },
-      items: ["food/apple", "food/banner"],
+      id: "canvas",
+      label: "Canvas",
     },
   ],
 };

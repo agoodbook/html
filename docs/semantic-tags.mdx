@@ -6,34 +6,199 @@ slug: /
 import DocTable from "../src/components/DocTable";
 
 # 新增元素
-HTML5引入了许多新的语义标签，用于更清晰地定义文档的结构和内容。以下是一些新增的全部语义标签：
+
 ## 语义标签
 
-<DocTable attribute={
-  [
-    {"title": "标签", 'dataIndex': 'name', render: (text) => <code>{text}</code>},
-    {"title": "描述", 'dataIndex': 'description'},
-  ]
-} value={[
-  {
-    key: "1",
-    name: "article",
-    description: "定义页面独立的内容区域。",
-  },
-  {
-    key: "2",
-    name: "aside",
-    description: "定义页面的侧边栏内容。",
-  },
-  {
-    key: "3",
-    name: "article",
-    description: "定义页面独立的内容区域。",
-  },
-  {
-    key: "4",
-    name: "aside",
-    description: "定义页面的侧边栏内容。",
-  },
-]}/>
+HTML5引入了一些新的语义标签，这些标签旨在更好地描述文档结构，提高文档的可读性和可访问性。以下是一些HTML5新增的主要语义标签：
 
+<DocTable
+  attribute={[
+    { title: "标签", dataIndex: "name", render: (text) => <code>{text}</code> },
+    {
+      title: "描述",
+      dataIndex: "description",
+      render: (text) => (
+        <span dangerouslySetInnerHTML={{ __html: text }}></span>
+      ),
+    },
+  ]}
+  value={[
+    {
+      key: "1",
+      name: "article",
+      description:
+        "表示文档、页面、应用或网站中的独立结构，通常包含在<code>article</code>元素中的内容应该与文档的其余部分无关，可以独立分配或重用",
+    },
+    {
+      key: "2",
+      name: "section",
+      description:
+        "用于定义文档中的节（section），比如章节、子节等。它有助于将文档分割为更小的部分，使其更具有组织性。",
+    },
+    {
+      key: "3",
+      name: "nav",
+      description: "表示页面导航链接的容器，通常包含站点导航链接。",
+    },
+    {
+      key: "4",
+      name: "header",
+      description:
+        "定义文档的页眉，通常包含一些标题、子标题、标志或作者信息。。",
+    },
+    {
+      key: "5",
+      name: "footer",
+      description: "定义文档的页脚，通常包含文档的作者、版权信息、联系方式等。",
+    },
+    {
+      key: "6",
+      name: "aside",
+      description:
+        "表示页面内容之外的内容，通常包含与主内容相关的辅助信息，比如侧边栏、广告、引用等。",
+    },
+    {
+      key: "7",
+      name: "main",
+      description:
+        "定义文档的主要内容，一个文档中应该只有一个<code>main</code>元素。",
+    },
+    {
+      key: "8",
+      name: "figure|figcaption",
+      description:
+        "<code>figure</code> 用于组合一组相关的媒体元素，而<code>figcaption</code> 用于为<code>figure</code>元素提供标题。",
+    },
+    {
+      key: "9",
+      name: "mark",
+      description:
+        "用于标记文档中的一些文本，通常用于突出显示搜索结果中的关键词。",
+    },
+    {
+      key: "10",
+      name: "time",
+      description:
+        "表示时间或日期的信息，有助于机器和浏览器更好地理解日期和时间的含义。",
+    },
+    {
+      key: "11",
+      name: "progress",
+      description: "定义任何类型的任务的进度。",
+    },
+  ]}
+/>
+
+## 图形元素
+
+<DocTable
+  attribute={[
+    { title: "标签", dataIndex: "name", render: (text) => <code>{text}</code> },
+    { title: "描述", dataIndex: "description" },
+  ]}
+  value={[
+    {
+      key: "1",
+      name: "canvas",
+      description:
+        "标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API",
+    },
+  ]}
+/>
+
+## 新多媒体元素
+
+<DocTable
+  attribute={[
+    { title: "标签", dataIndex: "name", render: (text) => <code>{text}</code> },
+    {
+      title: "描述",
+      dataIndex: "description",
+      render: (text) => (
+        <span dangerouslySetInnerHTML={{ __html: text }}></span>
+      ),
+    },
+  ]}
+  value={[
+    {
+      key: "1",
+      name: "audio",
+      description: "定义音频内容",
+    },
+    {
+      key: "2",
+      name: "video",
+      description: "定义视频（video 或者 movie）",
+    },
+    {
+      key: "3",
+      name: "source",
+      description: "定义多媒体资源 <code>video</code> 和 <code>audio</code>",
+    },
+    {
+      key: "4",
+      name: "embed",
+      description: "定义嵌入的内容，比如插件。",
+    },
+    {
+      key: "5",
+      name: "track",
+      description:
+        "为诸如<code>video</code>和<code>audio</code>元素之类的媒介规定外部文本轨道。",
+    },
+  ]}
+/>
+
+## 新表单元素
+
+<DocTable
+  attribute={[
+    { title: "标签", dataIndex: "name", render: (text) => <code>{text}</code> },
+    { title: "描述", dataIndex: "description" },
+  ]}
+  value={[
+    {
+      key: "1",
+      name: "datalist",
+      description:
+        "定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。",
+    },
+    {
+      key: "2",
+      name: "output",
+      description: "定义不同类型的输出，比如脚本的输出。",
+    },
+  ]}
+/>
+
+## 新的表格元素
+
+<DocTable
+  attribute={[
+    { title: "标签", dataIndex: "name", render: (text) => <code>{text}</code> },
+    { title: "描述", dataIndex: "description" },
+  ]}
+  value={[
+    {
+      key: "0",
+      name: "caption",
+      description:
+        "定义表格标题。通常位于table元素的第一个子元素，提供对表格内容的简短描述。",
+    },
+    {
+      key: "1",
+      name: "thead",
+      description: "用于将表格内容分成头部",
+    },
+    {
+      key: "2",
+      name: "tbody",
+      description: "用于将表格内容分成主体",
+    },
+    {
+      key: "3",
+      name: "tfoot",
+      description: "用于将表格内容底部",
+    },
+  ]}
+/>
