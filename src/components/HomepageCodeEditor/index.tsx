@@ -1,18 +1,5 @@
 import React, { useState } from "react";
 import "./index.scss";
-import BrowserOnly from "@docusaurus/BrowserOnly";
-
-const MonacoEditor = (props: any) => {
-  return (
-    <BrowserOnly fallback={<div>Loading...</div>}>
-      {() => {
-        const LibComponent = require("react-monaco-editor/lib");
-        return <LibComponent {...props} />;
-      }}
-    </BrowserOnly>
-  );
-};
-
 const HomepageCodeEditor = () => {
   const [code, setCode] = useState(
     "<!DOCTYPE html>\n" +
@@ -40,16 +27,6 @@ const HomepageCodeEditor = () => {
     setCode(newCode);
   };
 
-  const editorOptions: any = {
-    minimap: { enabled: false }, // 禁用代码预览
-    lineNumbers: "off",
-    scrollbar: {
-      verticalScrollbarSize: 0,
-      vertical: "hidden", // 隐藏垂直滚动条
-    },
-    padding: { top: 0, bottom: 0, left: 0, right: 100 }, // 设置 padding 为 0
-  };
-
   return (
     <div className="homepage-code-editor">
       <div className="editor-html">
@@ -58,13 +35,12 @@ const HomepageCodeEditor = () => {
           <li></li>
           <li></li>
         </div>
-        <MonacoEditor
-          language="html"
-          theme="vs-dark"
-          value={code}
-          options={editorOptions}
-          onChange={handleEditorChange}
-        />
+        <textarea
+          className="textarea-code"
+          onChange={(e) => handleEditorChange(e.target.value)}
+        >
+          {code}
+        </textarea>
       </div>
       <div className="preview" dangerouslySetInnerHTML={{ __html: code }}></div>
     </div>

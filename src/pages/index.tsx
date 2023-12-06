@@ -59,8 +59,7 @@ export default function Home() {
     >
       <HomepageHeader />
       <main>
-        // todo 待修复
-        {/*<HomepageCodeEditor />*/}
+        <HomepageCodeEditor />
       </main>
     </Layout>
   );
