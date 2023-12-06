@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkagoodbook=self.webpackChunkagoodbook||[]).push([[44],{8622:e=>{e.exports=JSON.parse('{"title":"Docusaurus Guides","slug":"/category/food","permalink":"/html/en/docs/next/category/food","navigation":{"previous":{"title":"guide","permalink":"/html/en/docs/next/guide"},"next":{"title":"apple","permalink":"/html/en/docs/next/food/apple"}}}')}}]);
